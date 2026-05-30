@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+	<defs>
+		<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+			<stop offset="0%" stop-color="#3e4a1f" />
+			<stop offset="55%" stop-color="#6f7d2a" />
+			<stop offset="100%" stop-color="#9bb13a" />
+		</linearGradient>
+		<radialGradient id="sun" cx="78%" cy="22%" r="22%">
+			<stop offset="0%" stop-color="#e7eec1" stop-opacity="0.85" />
+			<stop offset="60%" stop-color="#c8d77a" stop-opacity="0.2" />
+			<stop offset="100%" stop-color="#9bb13a" stop-opacity="0" />
+		</radialGradient>
+		<linearGradient id="hill1" x1="0" y1="0" x2="0" y2="1">
+			<stop offset="0%" stop-color="#6f7d2a" />
+			<stop offset="100%" stop-color="#3e4a1f" />
+		</linearGradient>
+		<linearGradient id="hill2" x1="0" y1="0" x2="0" y2="1">
+			<stop offset="0%" stop-color="#8a73b6" stop-opacity="0.55" />
+			<stop offset="100%" stop-color="#6f7d2a" stop-opacity="0.9" />
+		</linearGradient>
+	</defs>
+
+	<rect width="1600" height="1000" fill="url(#sky)" />
+	<rect width="1600" height="1000" fill="url(#sun)" />
+
+	<!-- distant hill, lavender wash -->
+	<path
+		d="M0,640 C220,560 420,600 640,580 C860,560 1080,640 1280,610 C1420,590 1520,610 1600,620 L1600,1000 L0,1000 Z"
+		fill="url(#hill2)"
+	/>
+
+	<!-- mid hill, chartreuse -->
+	<path
+		d="M0,760 C200,700 380,740 560,720 C780,696 980,760 1200,740 C1380,724 1500,750 1600,740 L1600,1000 L0,1000 Z"
+		fill="url(#hill1)"
+		opacity="0.95"
+	/>
+
+	<!-- foreground meadow -->
+	<path
+		d="M0,860 C260,820 520,860 800,840 C1080,820 1320,860 1600,840 L1600,1000 L0,1000 Z"
+		fill="#2c3415"
+		opacity="0.85"
+	/>
+
+	<!-- soft floating particles -->
+	<g fill="#ece5f4" opacity="0.55">
+		<circle cx="220" cy="220" r="3" />
+		<circle cx="380" cy="160" r="2" />
+		<circle cx="520" cy="280" r="2.5" />
+		<circle cx="900" cy="200" r="3" />
+		<circle cx="1100" cy="320" r="2" />
+		<circle cx="1320" cy="240" r="2.5" />
+		<circle cx="1450" cy="400" r="2" />
+		<circle cx="160" cy="420" r="2" />
+		<circle cx="700" cy="380" r="2.5" />
+	</g>
+
+	<!-- delicate botanical sprigs in the foreground corners -->
+	<g stroke="#c8d77a" stroke-width="1.5" fill="none" opacity="0.7">
+		<path d="M80,920 C100,860 120,820 150,780" />
+		<path d="M105,860 C120,855 135,852 150,850" />
+		<path d="M115,830 C128,826 140,824 150,822" />
+		<path d="M1520,940 C1500,880 1480,840 1450,800" />
+		<path d="M1495,880 C1480,876 1465,874 1450,872" />
+		<path d="M1485,850 C1472,846 1460,844 1450,842" />
+	</g>
+</svg>
