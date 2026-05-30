@@ -13,8 +13,11 @@ html {
     background-image: url("../../assets/coming_soon_bg.jpg");
 	min-height: 100vh;
 	height: 100%;
-	background-position: center;
+	background-position: 85% 20%;
 	background-size: cover;
+	background-repeat: no-repeat;
+    min-height: 100vh;
+	height: 100%;
 	position: relative;
 	color: #fff;
 	font-size: 25px;
