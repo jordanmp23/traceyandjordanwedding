@@ -16,6 +16,8 @@ html {
 	background-position: 85% 20%;
 	background-size: cover;
 	background-repeat: no-repeat;
+    min-height: 100vh;
+	height: 100%;
 	position: relative;
 	color: #fff;
 	font-size: 25px;
