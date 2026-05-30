@@ -1,0 +1,103 @@
+/* Coming Soon layout — uses the wedding palette (chartreuse + lavender). */
+
+body,
+html {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Helvetica,
+		Arial, sans-serif;
+}
+
+.bgimg {
+    background-image: url("../../assets/coming_soon_bg.jpg");
+	min-height: 100vh;
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	color: #fff;
+	font-size: 25px;
+	width: 100%;
+}
+
+.topleft {
+	position: absolute;
+	top: 0;
+	left: 16px;
+}
+
+.bottomleft {
+	position: absolute;
+	bottom: 0;
+	left: 16px;
+}
+
+.middle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	width: 100%;
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+
+hr {
+	margin: auto;
+	width: 40%;
+	border: 0;
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bg-layout {
+	width: 100%;
+	background-color: rgba(44, 52, 21, 0.55);
+	display: block;
+	min-height: 100vh;
+	height: 100%;
+}
+
+.h1 {
+	font-family: "Italiana", "Cormorant Garamond", "Times New Roman", serif;
+	color: #fbf9f1;
+	font-size: clamp(2.5rem, 8vw, 4.5rem);
+	margin: 20px 0;
+	font-weight: 400;
+	letter-spacing: 0.08em;
+}
+
+.content p {
+	font-family: "Cormorant Garamond", "Garamond", "Times New Roman", serif;
+	font-size: 1.75rem;
+	font-style: italic;
+	color: rgba(255, 255, 255, 0.9);
+	max-width: 520px;
+	margin: 0 auto 1.5rem;
+	line-height: 1.5;
+}
+
+.services {
+	margin-top: 20px;
+}
+
+.services span {
+	text-transform: uppercase;
+}
+
+.c-wrap {
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	background: #dadada;
+	bottom: 0;
+	width: 100%;
+	height: auto;
+	top: 220px;
+}
+
+.content {
+	width: 100%;
+}
+
