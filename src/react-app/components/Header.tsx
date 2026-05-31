@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import logoUrl from "../assets/T_and_J.png";
 
 const navLinks = [
 	{ to: "/", label: "Home", end: true },
@@ -27,8 +28,10 @@ function Header() {
 	}, [isMenuOpen]);
 
 	return (
-		<header className="site-header">
-			<div className="hero-overlay" />
+		<header className={`site-header${isMenuOpen ? " menu-open" : ""}`}>
+			<Link to="/" className="site-logo" aria-label="Tracey and Jordan — Home">
+				<img src={logoUrl} alt="Tracey & Jordan" />
+			</Link>
 
 			<button
 				type="button"
@@ -42,14 +45,6 @@ function Header() {
 				<span className="menu-bar" />
 				<span className="menu-bar" />
 			</button>
-
-			<div className="header-content">
-				<h1 className="header-names">
-					<span>Tracey</span>
-					<span className="header-amp">&amp;</span>
-					<span>Jordan</span>
-				</h1>
-			</div>
 
 			<nav
 				id="primary-menu"

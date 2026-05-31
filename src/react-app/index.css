@@ -18,6 +18,8 @@
 	--font-body: "Montserrat", system-ui, -apple-system, "Segoe UI", Helvetica,
 		Arial, sans-serif;
 
+	--header-height: 68px;
+
 	font-family: var(--font-body);
 	line-height: 1.6;
 	font-weight: 400;

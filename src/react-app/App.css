@@ -32,85 +32,90 @@
 /* Header / hero                                                       */
 /* ------------------------------------------------------------------ */
 
+/* Fixed translucent navbar — page content scrolls behind it. */
 .site-header {
-	position: relative;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 50;
+	height: var(--header-height);
+	padding: 0 1.25rem 0 1.5rem;
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	padding: 1.75rem 1.5rem 1.25rem;
+	justify-content: space-between;
+	gap: 1rem;
 	color: #fff;
-	text-align: center;
-	overflow: hidden;
-	background-image: url("/hero.svg");
-	background-size: cover;
-	background-position: center;
-	background-color: var(--color-chartreuse-deep);
-}
-
-.hero-overlay {
-	position: absolute;
-	inset: 0;
 	background: linear-gradient(
 		180deg,
-		rgba(44, 52, 21, 0.55) 0%,
-		rgba(44, 52, 21, 0.65) 100%
+		rgba(44, 52, 21, 0.42) 0%,
+		rgba(44, 52, 21, 0.28) 100%
 	);
-	z-index: 1;
+	backdrop-filter: blur(14px) saturate(160%);
+	-webkit-backdrop-filter: blur(14px) saturate(160%);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+	transition:
+		background 240ms ease,
+		border-bottom-color 240ms ease,
+		box-shadow 240ms ease;
 }
 
-.header-content {
-	position: relative;
-	z-index: 2;
-	max-width: 900px;
-	width: 100%;
+/* Subtle highlight sheen at the very top of the bar to suggest a glass surface. */
+.site-header::before {
+	content: "";
+	position: absolute;
+	inset: 0 0 auto 0;
+	height: 1px;
+	background: linear-gradient(
+		90deg,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 0.35) 50%,
+		rgba(255, 255, 255, 0) 100%
+	);
+	pointer-events: none;
+	transition: opacity 240ms ease;
 }
 
-.header-eyebrow {
-	font-family: var(--font-body);
-	text-transform: uppercase;
-	letter-spacing: 0.35em;
-	font-size: 0.65rem;
-	font-weight: 300;
-	margin: 0 0 0.5rem;
-	color: var(--color-chartreuse-pale);
+/* When the menu is open, drop the header's chrome so the menu panel's full-screen
+   glass treatment flows seamlessly under the logo + hamburger. */
+.site-header.menu-open {
+	background: transparent;
+	backdrop-filter: none;
+	-webkit-backdrop-filter: none;
+	border-bottom-color: transparent;
+	box-shadow: none;
 }
 
-.header-names {
-	font-family: var(--font-display);
-	font-weight: 400;
-	font-size: clamp(1.75rem, 4.5vw, 2.75rem);
-	line-height: 1.1;
-	color: #fff;
-	display: flex;
-	gap: 0.6rem;
-	align-items: baseline;
-	justify-content: center;
-	flex-wrap: wrap;
-	letter-spacing: 0.04em;
+.site-header.menu-open::before {
+	opacity: 0;
 }
 
-.header-amp {
-	font-family: var(--font-serif);
-	font-style: italic;
-	color: var(--color-lavender);
-	font-weight: 300;
+.site-logo {
+	display: inline-flex;
+	align-items: center;
+	padding: 0.25rem 0.4rem;
+	border-radius: 4px;
+	transition: opacity 200ms ease;
 }
 
-.header-date {
-	font-family: var(--font-body);
-	letter-spacing: 0.22em;
-	text-transform: uppercase;
-	font-size: 0.7rem;
-	color: rgba(255, 255, 255, 0.85);
-	margin: 0.4rem 0 1rem;
+.site-logo img {
+	display: block;
+	height: calc(var(--header-height) - 24px);
+	width: auto;
 }
 
-/* Hamburger toggle — fixed so it stays reachable on long pages */
+.site-logo:hover {
+	opacity: 0.85;
+}
+
+.site-logo:focus-visible {
+	outline: 2px solid var(--color-lavender);
+	outline-offset: 3px;
+}
+
+/* Hamburger toggle — sits inside the header and blends with the glass treatment. */
 .menu-toggle {
-	position: fixed;
-	top: 1rem;
-	right: 1rem;
-	z-index: 30;
 	width: 44px;
 	height: 44px;
 	display: inline-flex;
@@ -120,21 +125,23 @@
 	gap: 6px;
 	padding: 0;
 	border: none;
-	border-radius: 50%;
-	background-color: rgba(44, 52, 21, 0.78);
+	border-radius: 8px;
+	background-color: transparent;
 	cursor: pointer;
-	transition:
-		background-color 200ms ease,
-		transform 200ms ease;
+	transition: background-color 200ms ease;
 }
 
 .menu-toggle:hover {
-	background-color: rgba(138, 115, 182, 0.85);
+	background-color: rgba(255, 255, 255, 0.1);
 }
 
 .menu-toggle:focus-visible {
 	outline: 2px solid var(--color-lavender);
 	outline-offset: 3px;
+}
+
+.menu-toggle.is-open {
+	background-color: rgba(255, 255, 255, 0.08);
 }
 
 .menu-bar {
@@ -161,21 +168,23 @@
 	transform: translateY(-7.5px) rotate(-45deg);
 }
 
-/* Full-screen menu overlay */
+/* Full-screen menu overlay — matches the header's translucent glass treatment so
+   the bar visually dissolves into the panel when the menu is open. */
 .menu-panel {
 	position: fixed;
 	inset: 0;
-	z-index: 25;
+	z-index: 40;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 4rem 1.5rem;
+	padding: var(--header-height) 1.5rem 4rem;
 	background: linear-gradient(
-		160deg,
-		rgba(44, 52, 21, 0.97) 0%,
-		rgba(62, 74, 31, 0.97) 50%,
-		rgba(111, 125, 42, 0.97) 100%
+		180deg,
+		rgba(44, 52, 21, 0.58) 0%,
+		rgba(44, 52, 21, 0.5) 100%
 	);
+	backdrop-filter: blur(18px) saturate(160%);
+	-webkit-backdrop-filter: blur(18px) saturate(160%);
 	opacity: 0;
 	visibility: hidden;
 	transition:
@@ -244,7 +253,7 @@
 /* ------------------------------------------------------------------ */
 
 .page {
-	padding: 4rem 1.5rem;
+	padding: calc(4rem + var(--header-height)) 1.5rem 4rem;
 }
 
 .page-inner {
@@ -511,6 +520,6 @@
 	}
 
 	.page {
-		padding: 3rem 1.25rem;
+		padding: calc(3rem + var(--header-height)) 1.25rem 3rem;
 	}
 }
