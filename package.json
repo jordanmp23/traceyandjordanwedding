@@ -13,6 +13,7 @@
 	},
 	"dependencies": {
 		"hono": "^4.12.23",
+		"motion": "^12.40.0",
 		"prop-types": "^15.8.1",
 		"react": "19.2.1",
 		"react-dom": "19.2.1",

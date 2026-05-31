@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import logoUrl from "../assets/T_and_J.png";
 
 const navLinks = [
-	{ to: "/", label: "Event", end: true },
+	{ to: "/", label: "Events", end: true },
 	{ to: "/our-story", label: "Our Story" },
 	{ to: "/accommodations", label: "Accommodations" },
 	{ to: "/location", label: "Location" },
