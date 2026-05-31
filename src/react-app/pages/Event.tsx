@@ -1,6 +1,5 @@
-import PageHero from "../components/location_components/page_hero";
-	// import gardenWeddingImg from "../assets/GardenWedding.jpg";
-import eventPageImg  from "../assets/event_page.jpg"
+import PageHero from "../components/page_hero_components/page_hero";
+import eventPageImg  from "../assets/engagement_walking.jpg"
 
 function Event() {
 	return (
