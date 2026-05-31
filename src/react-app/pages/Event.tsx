@@ -5,7 +5,7 @@ import eventPageImg  from "../assets/event_page.jpg"
 function Event() {
 	return (
 		<>
-			<PageHero title="Events" image={eventPageImg} />
+			<PageHero title="Events" image={eventPageImg} position="85% 20%" />
 
 			<section className="page page-event">
 				<div className="page-inner">

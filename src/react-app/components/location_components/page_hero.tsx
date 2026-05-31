@@ -6,9 +6,15 @@ import "./page_hero.css";
 type PageHeroProps = {
 	title: string;
 	image: string;
+	/**
+	 * CSS background-position value (e.g. "center", "85% 20%", "left top").
+	 * Lets each page pick its own focal point so the subject stays in frame
+	 * across viewport aspect ratios — mobile crops differently than desktop.
+	 */
+	position?: string;
 };
 
-const PageHero = ({ title, image }: PageHeroProps) => {
+const PageHero = ({ title, image, position = "center" }: PageHeroProps) => {
 	useEffect(() => {
 		const previous = document.title;
 		document.title = `${title} · Tracey & Jordan`;
@@ -17,10 +23,15 @@ const PageHero = ({ title, image }: PageHeroProps) => {
 		};
 	}, [title]);
 
+	const heroStyle: CSSProperties = {
+		backgroundImage: `url(${image})`,
+		backgroundPosition: position,
+	};
+
 	return (
 		<motion.section
 			className="page-hero"
-			style={{ backgroundImage: `url(${image})` } as CSSProperties}
+			style={heroStyle}
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			exit={{ opacity: 0 }}
