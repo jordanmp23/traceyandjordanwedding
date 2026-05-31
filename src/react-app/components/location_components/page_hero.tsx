@@ -1,7 +1,7 @@
 import { useEffect, type CSSProperties } from "react";
 import { motion } from "motion/react";
 
-import "./layout.css";
+import "./page_hero.css";
 
 type PageHeroProps = {
 	title: string;
