@@ -1,4 +1,6 @@
-import { NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+import logoUrl from "../assets/T_and_J.png";
 
 const navLinks = [
 	{ to: "/", label: "Home", end: true },
@@ -9,35 +11,64 @@ const navLinks = [
 ];
 
 function Header() {
-	return (
-		<header className="site-header">
-			<div className="hero-overlay" />
-			<div className="header-content">
-				<h1 className="header-names">
-					<span>Tracey</span>
-					<span className="header-amp">&amp;</span>
-					<span>Jordan</span>
-				</h1>
-				<p className="header-date"> · June 5, 2027 · Cana Vineyards ~ Middleburg, VA ·</p>
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-				<nav className="site-nav" aria-label="Primary">
-					<ul>
-						{navLinks.map((link) => (
-							<li key={link.to}>
-								<NavLink
-									to={link.to}
-									end={link.end}
-									className={({ isActive }) =>
-										isActive ? "nav-link active" : "nav-link"
-									}
-								>
-									{link.label}
-								</NavLink>
-							</li>
-						))}
-					</ul>
-				</nav>
-			</div>
+	useEffect(() => {
+		if (!isMenuOpen) return;
+		const onKey = (e: KeyboardEvent) => {
+			if (e.key === "Escape") setIsMenuOpen(false);
+		};
+		document.addEventListener("keydown", onKey);
+		const previousOverflow = document.body.style.overflow;
+		document.body.style.overflow = "hidden";
+		return () => {
+			document.removeEventListener("keydown", onKey);
+			document.body.style.overflow = previousOverflow;
+		};
+	}, [isMenuOpen]);
+
+	return (
+		<header className={`site-header${isMenuOpen ? " menu-open" : ""}`}>
+			<Link to="/" className="site-logo" aria-label="Tracey and Jordan — Home">
+				<img src={logoUrl} alt="Tracey & Jordan" />
+			</Link>
+
+			<button
+				type="button"
+				className={`menu-toggle${isMenuOpen ? " is-open" : ""}`}
+				aria-expanded={isMenuOpen}
+				aria-controls="primary-menu"
+				aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+				onClick={() => setIsMenuOpen((open) => !open)}
+			>
+				<span className="menu-bar" />
+				<span className="menu-bar" />
+				<span className="menu-bar" />
+			</button>
+
+			<nav
+				id="primary-menu"
+				className={`menu-panel${isMenuOpen ? " is-open" : ""}`}
+				aria-label="Primary"
+				aria-hidden={!isMenuOpen}
+			>
+				<ul>
+					{navLinks.map((link) => (
+						<li key={link.to}>
+							<NavLink
+								to={link.to}
+								end={link.end}
+								onClick={() => setIsMenuOpen(false)}
+								className={({ isActive }) =>
+									isActive ? "menu-link active" : "menu-link"
+								}
+							>
+								{link.label}
+							</NavLink>
+						</li>
+					))}
+				</ul>
+			</nav>
 		</header>
 	);
 }
