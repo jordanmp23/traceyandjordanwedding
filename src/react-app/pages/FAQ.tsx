@@ -5,7 +5,7 @@ import faqImg  from "../assets/cana_vineyards.jpg"
 function FAQ() {
 	return (
 		<>
-			<PageHero title="FAQ" image={faqImg} position="85% 20%" />
+			<PageHero title="FAQ" image={faqImg} position="65% 20%" />
 			<section className="page">
 				<div className="page-inner">
 					<h2 className="page-title">FAQ</h2>
