@@ -1,10 +1,10 @@
 import PageHero from "../components/page_hero_components/page_hero";
-import eventPageImg  from "../assets/engagement_walking.jpg"
+import appalachianMtnImg  from "../assets/Appalachian-Mountains.webp"
 
 function TravelAndStay() {
 	return (
 		<>
-			<PageHero title="Travel + Stay" image={eventPageImg} position="85% 20%" />		
+			<PageHero title="Travel + Stay" image={appalachianMtnImg} position="85% 20%" />		
 			<section className="page">
 				<div className="page-inner">
 					<h2 className="page-title">Travel & Stay</h2>
