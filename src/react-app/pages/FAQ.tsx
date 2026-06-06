@@ -1,10 +1,11 @@
 import PageHero from "../components/page_hero_components/page_hero";
-import eventPageImg  from "../assets/engagement_walking.jpg"
+import faqImg  from "../assets/cana_vineyards.jpg"
+
 
 function FAQ() {
 	return (
 		<>
-			<PageHero title="FAQ" image={eventPageImg} position="85% 20%" />
+			<PageHero title="FAQ" image={faqImg} position="85% 20%" />
 			<section className="page">
 				<div className="page-inner">
 					<h2 className="page-title">FAQ</h2>
