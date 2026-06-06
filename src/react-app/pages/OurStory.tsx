@@ -1,5 +1,5 @@
 import PageHero from "../components/page_hero_components/page_hero";
-import ourStoryImg  from "../assets/vt_grad_pic.jpg"
+import ourStoryImg  from "../assets/vt_pic.jpg"
 
 function OurStory() {
 	return (
