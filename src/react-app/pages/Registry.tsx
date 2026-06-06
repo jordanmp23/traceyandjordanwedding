@@ -4,7 +4,7 @@ import registryImg  from "../assets/engagement_hug.jpg"
 function Registry() {
 	return (
 		<>
-			<PageHero title="Registry" image={registryImg} position="75% 20%" />		
+			<PageHero title="Registry" image={registryImg} position="70% 20%" />		
 			<section className="page">
 				<div className="page-inner">
 					<h2 className="page-title">Registry</h2>
