@@ -2,9 +2,10 @@ import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Event from "./pages/Event";
 import OurStory from "./pages/OurStory";
-import Accommodations from "./pages/Accommodations";
-import Location from "./pages/Location";
+import FAQ from "./pages/FAQ";
+import TravelAndStay from "./pages/TravelAndStay";
 import RSVP from "./pages/RSVP";
+import Registry from "./pages/Registry";
 import "./App.css";
 
 function App() {
@@ -15,9 +16,10 @@ function App() {
 				<Routes>
 					<Route path="/" element={<Event />} />
 					<Route path="/our-story" element={<OurStory />} />
-					<Route path="/accommodations" element={<Accommodations />} />
-					<Route path="/location" element={<Location />} />
+					<Route path="/travelandstay" element={<TravelAndStay />} />
+					<Route path="/faq" element={<FAQ />} />
 					<Route path="/rsvp" element={<RSVP />} />
+					<Route path="/registry" element={<Registry />} />
 				</Routes>
 			</main>
 			<footer className="site-footer">
