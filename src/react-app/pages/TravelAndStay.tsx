@@ -1,8 +1,8 @@
-function Accommodations() {
+function TravelAndStay() {
 	return (
 		<section className="page">
 			<div className="page-inner">
-				<h2 className="page-title">Accommodations</h2>
+				<h2 className="page-title">Travel & Stay</h2>
 				<p className="page-lead">
 					We've reserved a handful of room blocks at hotels near the venue.
 					TODO(Jordan): Add details about the hotel(s?)
@@ -43,4 +43,4 @@ function Accommodations() {
 	);
 }
 
-export default Accommodations;
+export default TravelAndStay;

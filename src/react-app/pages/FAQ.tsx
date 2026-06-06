@@ -1,0 +1,30 @@
+function FAQ() {
+	return (
+		<section className="page">
+			<div className="page-inner">
+				<h2 className="page-title">FAQ</h2>
+				<p className="page-lead">
+					Frequently asked questions about the venue, parking, transportation, and more.
+				</p>
+
+				<div className="card-grid">
+					<article className="info-card">
+						<h3>todo...</h3>
+						<p>
+							stuffs
+						</p>
+					</article>
+
+					<article className="info-card">
+						<h3>another question</h3>
+						<p>
+							another answer
+						</p>
+					</article>
+				</div>
+			</div>
+		</section>
+	);
+}
+
+export default FAQ;

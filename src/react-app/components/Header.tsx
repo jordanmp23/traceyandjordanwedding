@@ -5,9 +5,10 @@ import logoUrl from "../assets/T_and_J.png";
 const navLinks = [
 	{ to: "/", label: "Events", end: true },
 	{ to: "/our-story", label: "Our Story" },
-	{ to: "/accommodations", label: "Accommodations" },
-	{ to: "/location", label: "Location" },
+	{ to: "/travelandstay", label: "Travel & Stay" },
+	{ to: "/faq", label: "FAQ" },
 	{ to: "/rsvp", label: "RSVP" },
+	{ to: "/registry", label: "Registry" }
 ];
 
 function Header() {
