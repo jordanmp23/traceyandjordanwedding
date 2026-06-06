@@ -7,7 +7,7 @@ function RSVP() {
 
 	return (
 		<>
-			<PageHero title="RSVP" image={rsvpImg} position="85% 20%" />
+			<PageHero title="RSVP" image={rsvpImg} position="65% 20%" />
 			<section className="page">
 				<div className="page-inner narrow">
 					<h2 className="page-title">RSVP</h2>
