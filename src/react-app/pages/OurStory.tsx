@@ -4,7 +4,7 @@ import ourStoryImg  from "../assets/vt_pic.jpg"
 function OurStory() {
 	return (
 		<>
-			<PageHero title="Our Story" image={ourStoryImg} position="55% 20%" />
+			<PageHero title="Our Story" image={ourStoryImg} position="45% 20%" />
 			<section className="page">
 				<div className="page-inner narrow">
 					<h2 className="page-title">Our Story</h2>
