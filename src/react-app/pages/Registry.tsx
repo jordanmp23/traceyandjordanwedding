@@ -1,10 +1,10 @@
 import PageHero from "../components/page_hero_components/page_hero";
 import registryImg  from "../assets/engagement_hug.jpg"
 
-function FAQ() {
+function Registry() {
 	return (
 		<>
-			<PageHero title="Registry" image={registryImg} position="85% 20%" />		
+			<PageHero title="Registry" image={registryImg} position="75% 20%" />		
 			<section className="page">
 				<div className="page-inner">
 					<h2 className="page-title">Registry</h2>
@@ -17,4 +17,4 @@ function FAQ() {
 	);
 }
 
-export default FAQ;
+export default Registry;
