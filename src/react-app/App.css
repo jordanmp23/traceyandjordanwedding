@@ -96,6 +96,7 @@
 	align-items: center;
 	padding: 0.25rem 0.4rem;
 	border-radius: 4px;
+	text-decoration: none;
 	transition: opacity 200ms ease;
 }
 
@@ -221,6 +222,7 @@
 	padding: 0.15rem 0.5rem;
 	position: relative;
 	display: inline-block;
+	text-decoration: none;
 	transition: color 200ms ease;
 }
 
@@ -254,6 +256,7 @@
 
 .page {
 	padding: calc(4rem + var(--header-height)) 1.5rem 4rem;
+	scroll-snap-align: start;
 }
 
 .page-inner {

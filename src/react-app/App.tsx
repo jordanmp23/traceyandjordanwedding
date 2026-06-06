@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
-import Home from "./pages/Home";
+import Event from "./pages/Event";
 import OurStory from "./pages/OurStory";
 import Accommodations from "./pages/Accommodations";
 import Location from "./pages/Location";
@@ -13,7 +13,7 @@ function App() {
 			<Header />
 			<main className="site-main">
 				<Routes>
-					<Route path="/" element={<Home />} />
+					<Route path="/" element={<Event />} />
 					<Route path="/our-story" element={<OurStory />} />
 					<Route path="/accommodations" element={<Accommodations />} />
 					<Route path="/location" element={<Location />} />
