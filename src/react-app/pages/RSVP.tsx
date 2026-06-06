@@ -1,13 +1,13 @@
 import { useState } from "react";
 import PageHero from "../components/page_hero_components/page_hero";
-import eventPageImg  from "../assets/engagement_walking.jpg"
+import rsvpImg  from "../assets/cana_vineyards.jpg"
 
 function RSVP() {
 	const [submitted, setSubmitted] = useState(false);
 
 	return (
 		<>
-			<PageHero title="RSVP" image={eventPageImg} position="85% 20%" />
+			<PageHero title="RSVP" image={rsvpImg} position="85% 20%" />
 			<section className="page">
 				<div className="page-inner narrow">
 					<h2 className="page-title">RSVP</h2>
