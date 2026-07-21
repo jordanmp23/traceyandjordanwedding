@@ -36,11 +36,6 @@
 	box-sizing: border-box;
 }
 
-html {
-	scroll-behavior: smooth;
-	scroll-snap-type: y proximity;
-}
-
 body {
 	margin: 0;
 	min-width: 320px;

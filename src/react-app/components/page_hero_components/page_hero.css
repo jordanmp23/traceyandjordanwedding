@@ -13,7 +13,6 @@
 	background-repeat: no-repeat;
 	color: #fff;
 	overflow: hidden;
-	scroll-snap-align: start;
 }
 
 .page-hero-overlay {

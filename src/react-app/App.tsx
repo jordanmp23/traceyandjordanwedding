@@ -1,4 +1,5 @@
-import { Route, Routes } from "react-router-dom";
+import { useEffect } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Header from "./components/Header";
 import Event from "./pages/Event";
 import OurStory from "./pages/OurStory";
@@ -8,9 +9,18 @@ import RSVP from "./pages/RSVP";
 import Registry from "./pages/Registry";
 import "./App.css";
 
+function ScrollToTop() {
+	const { pathname } = useLocation();
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [pathname]);
+	return null;
+}
+
 function App() {
 	return (
 		<div className="site">
+			<ScrollToTop />
 			<Header />
 			<main className="site-main">
 				<Routes>
