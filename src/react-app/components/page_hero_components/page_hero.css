@@ -62,7 +62,7 @@
 
 @media (max-width: 700px) {
   .page-hero {
-    min-height: 92svh;
+    min-height: 88svh;
   }
 
   .page-hero::after {
