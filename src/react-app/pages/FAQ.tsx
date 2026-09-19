@@ -44,9 +44,10 @@ function FAQ() {
 						<article className="info-card">
 							<h3>Where and when should I RSVP by?</h3>
 							<p>
-								Please RSVP by the date provided on your invitation sent by
-								mail. You can RSVP on our wedding website, at{" "}
-								<a href="https://traceyandjordan.com">traceyandjordan.com</a>.
+								Details on how to RSVP will be shared soon. Stay tuned — once
+								they're ready, they'll be posted on the{" "}
+								<a href="/rsvp">RSVP page</a> and the date to reply by will be
+								included on your mailed invitation.
 							</p>
 						</article>
 
