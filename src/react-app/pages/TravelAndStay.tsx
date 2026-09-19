@@ -1,5 +1,6 @@
 import PageHero from "../components/page_hero_components/page_hero";
 import appalachianMtnImg from "../assets/Appalachian-Mountains.webp";
+import hotelLobby from "../assets/hotel_lobby.avif";
 import venueImg from "../assets/cana_vineyards.jpg";
 import SectionIntro from "../components/editorial/SectionIntro";
 import PhotoTextBlock from "../components/editorial/PhotoTextBlock";
@@ -27,8 +28,8 @@ function TravelAndStay() {
         <PhotoTextBlock
           eyebrow="02 · Where to stay"
           title="SpringHill Suites by Marriott"
-          image={appalachianMtnImg}
-          imageAlt="Virginia mountains"
+          image={hotelLobby}
+          imageAlt="SpringHill Suites by Marriott"
           caption="Approx. 30 minutes from the venue"
         >
           <p>
