@@ -1,25 +1,10 @@
-import { StrictMode, useState } from "react";
+import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, useNavigate } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App.tsx";
-import ComingSoon from "./pages/ComingSoon.tsx";
-import { isAuthed } from "./lib/auth";
 
 function Root() {
-	const [authed, setAuthed] = useState(isAuthed);
-	const navigate = useNavigate();
-
-	if (!authed) {
-		return (
-			<ComingSoon
-				onUnlock={() => {
-					setAuthed(true);
-					navigate("/", { replace: true });
-				}}
-			/>
-		);
-	}
 
 	return <App />;
 }
