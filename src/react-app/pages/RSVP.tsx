@@ -27,11 +27,10 @@ function RSVP() {
             <p className="invitation-shell__eyebrow">June 5, 2027 · Middleburg, Virginia</p>
             <h2 className="invitation-shell__title">You are invited.</h2>
             <p className="invitation-shell__body">
-              This is where the final RSVP flow will live. The design is intentionally ready for the custom guest
-              lookup + response experience you are planning.
+              Details on where and when to RSVP are coming soon... Stay tuned!
             </p>
             <p className="invitation-shell__note">
-              Placeholder: replace this section with the invitation lookup form once the RSVP backend is connected.
+              {/* Placeholder: replace this section with the invitation lookup form once the RSVP backend is connected. */}
             </p>
             <div style={{ marginTop: "1.7rem" }}>
               <span className="editorial-button">RSVP opening soon</span>

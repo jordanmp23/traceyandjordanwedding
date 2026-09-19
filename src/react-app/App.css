@@ -233,6 +233,14 @@
   background: var(--color-paper);
 }
 
+/* Keep left-aligned editorial copy inside the same centered page grid as the
+   rest of the site. Previously SectionIntro had only a max-width, which meant
+   left-aligned sections could begin flush against the viewport edge. */
+.editorial-section > .section-intro {
+  width: min(calc(100% - 3rem), 1120px);
+  margin-inline: auto;
+}
+
 .editorial-section--ink {
   color: #fff;
   background: var(--color-ink);
@@ -382,7 +390,7 @@
 .photo-text__frame {
   position: relative;
   overflow: hidden;
-  min-height: clamp(430px, 56vw, 690px);
+  aspect-ratio: 4 / 3;
   background: #ddd6c9;
 }
 
@@ -408,6 +416,8 @@
 }
 
 .photo-text__image {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   display: block;
@@ -876,7 +886,7 @@
   }
 
   .photo-text__frame {
-    min-height: 420px;
+    aspect-ratio: 4 / 3;
   }
 
   .editorial-faq summary {

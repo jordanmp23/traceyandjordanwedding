@@ -49,7 +49,6 @@ const PageHero = ({ title, image, position = "center" }: PageHeroProps) => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
       >
-        <p className="page-hero-kicker">Tracey &amp; Jordan</p>
         <h1 className="page-hero-title">{title}</h1>
       </motion.div>
     </motion.section>

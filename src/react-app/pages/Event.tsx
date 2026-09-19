@@ -9,7 +9,7 @@ import FullBleed from "../components/editorial/FullBleed";
 function Event() {
   return (
     <>
-      <PageHero title="Event" image={eventPageImg} position="85% 20%" />
+      <PageHero title="Events" image={eventPageImg} position="85% 20%" />
 
       <section className="editorial-intro">
         <SectionIntro
