@@ -25,11 +25,6 @@ function Registry() {
 			<section className="page">
 				<div className="page-inner">
 					<h2 className="page-title">Registry</h2>
-					<p className="page-lead">
-						Find out about our registry and how to contribute to our new life
-						together.
-					</p>
-
 					<div className="registry-embed">
 						<a
 							className="zola-registry-embed"

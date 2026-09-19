@@ -27,15 +27,13 @@ function Event() {
 							<br />
 							Cocktail hour and reception to follow immediately after the
 							ceremony.
+							<br /><br/>
+							Transportation will be provided to and from the venue for those staying at the reserved hotel. 
 							<br />
-							Transportation will be provided to and from the venue; details
-							can be found on our FAQ page. Parking is also available for those
-							who wish to drive.
+							Parking is also available for those who wish to drive.
 						</p>
 						<p className="dress-code">Dress code is cocktail attire.</p>
 					</div>
-
-					<h2 className="event-section-title">The Day Before</h2>
 					<hr />
 				</div>
 			</section>

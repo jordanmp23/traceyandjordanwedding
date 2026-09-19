@@ -8,10 +8,6 @@ function FAQ() {
 			<section className="page">
 				<div className="page-inner">
 					<h2 className="page-title">FAQ</h2>
-					<p className="page-lead">
-						Frequently asked questions about the venue, parking, transportation,
-						and more.
-					</p>
 
 					<div className="faq-list">
 						<article className="info-card">
@@ -75,7 +71,7 @@ function FAQ() {
 						<article className="info-card">
 							<h3>What is the dress code?</h3>
 							<p>
-								Yes! Please wear colorful cocktail attire. Please no denim,
+								Please wear colorful cocktail attire. Please no denim,
 								hats, or flip flops. We are expecting the temperature to be
 								fairly warm so lighter fabrics are recommended.
 							</p>
