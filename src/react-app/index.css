@@ -1,121 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap');
+
 :root {
-	/* Palette — chartreuse-led, with lavender accents */
-	--color-cream: #fbf9f1;
-	--color-ivory: #f4f1e4;
-	--color-chartreuse-deep: #6f7d2a;
-	--color-chartreuse: #9bb13a;
-	--color-chartreuse-soft: #c8d77a;
-	--color-chartreuse-pale: #e7eec1;
-	--color-lavender: #b8a4d4;
-	--color-lavender-deep: #8a73b6;
-	--color-lavender-pale: #ece5f4;
-	--color-ink: #2c3415;
-	--color-muted: #6b6f57;
-	--color-border: rgba(111, 125, 42, 0.18);
+  --color-ivory: #f7f3eb;
+  --color-cream: #fbf8f2;
+  --color-paper: #efe8dc;
+  --color-sage: #6f7d2a;
+  --color-sage-dark: #4d581e;
+  --color-sage-soft: #a6ae76;
+  --color-lavender: #b7a4cf;
+  --color-lavender-dark: #80669f;
+  --color-ink: #2f3027;
+  --color-muted: #6d6e64;
+  --color-border: rgba(47, 48, 39, 0.14);
+  --color-white: #fffdf8;
 
-	--font-display: "Italiana", "Cormorant Garamond", "Times New Roman", serif;
-	--font-serif: "Cormorant Garamond", "Garamond", "Times New Roman", serif;
-	--font-body: "Times New Roman", system-ui, -apple-system, "Segoe UI", Helvetica,
-		Arial, sans-serif;
+  --font-display: "Cormorant Garamond", "Iowan Old Style", "Baskerville", Georgia, serif;
+  --font-body: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
-	--header-height: 68px;
+  --header-height: 68px;
+  --content-max: 1180px;
+  --narrow-max: 760px;
 
-	font-family: var(--font-body);
-	line-height: 1.6;
-	font-weight: 400;
-	color: var(--color-ink);
-	background-color: var(--color-cream);
-
-	font-synthesis: none;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-body);
+  line-height: 1.65;
+  font-weight: 400;
+  color: var(--color-ink);
+  background: var(--color-cream);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-	margin: 0;
-	min-width: 320px;
-	min-height: 100vh;
-	background-color: var(--color-cream);
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--color-cream);
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font-family: var(--font-body);
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  max-width: 100%;
 }
 
 h1,
 h2,
 h3,
-h4 {
-	font-family: var(--font-serif);
-	font-weight: 500;
-	color: var(--color-ink);
-	letter-spacing: 0.01em;
-	margin: 0;
+h4,
+h5 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--color-ink);
 }
 
 p {
-	margin: 0 0 1em;
+  margin: 0 0 1em;
 }
 
 a {
-	color: var(--color-chartreuse-deep);
-	transition: color 200ms ease;
+  color: var(--color-sage-dark);
 }
 
 a:hover {
-	color: var(--color-lavender-deep);
+  color: var(--color-lavender-dark);
 }
 
 button {
-	font-family: inherit;
-	cursor: pointer;
+  cursor: pointer;
 }
 
-.dress-code {
-	font-family: "Times New Roman", serif;
-	font-size: 1.25rem;
-	font-style: italic;
-	color: rgba(180, 43, 178, 0.9);
-	max-width: 520px;
-	margin: 0 auto 1.5rem;
-	line-height: 1.5;
-	text-align: center;
+::selection {
+  color: var(--color-ink);
+  background: rgba(183, 164, 207, 0.42);
 }
 
-.event-time {
-	margin: 0;
-	font-family: "Times New Roman", serif;
-	font-size: 1.25rem;
-	font-style: italic;
-	color: rgba(44, 52, 21, 0.9);
-	text-align: center;
-}
-
-
-.event-section-title {
-	font-family: var(--font-serif);
-	font-weight: 500;
-	font-size: 64px;
-	font-style: italic;
-	color: var(--color-ink);
-	letter-spacing: 0.01em;
-	margin: 0;
-	text-align: center;
-	color: var(--color-chartreuse-deep);
-}
-
-.event-location {
-	text-align: center;
-	font-family: "Times New Roman", serif;
-	font-size: 1.25rem;
-	color: rgba(44, 52, 21, 0.9);
-	margin-bottom: 1.5rem;
-	margin-top: 1.5rem;
-}
-.event-location-title {
-	font-family: "Times New Roman", serif;
-	font-size: 1.25rem;
-	color: rgba(44, 52, 21, 0.9);
-	margin-bottom: 0;
+@media (max-width: 700px) {
+  :root {
+    --header-height: 64px;
+  }
 }
