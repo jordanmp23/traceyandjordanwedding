@@ -1,5 +1,5 @@
 import PageHero from "../components/page_hero_components/page_hero";
-import faqImg from "../assets/cana_vineyards.jpg";
+import faqImg from "../assets/norwayCruise.jpg";
 import SectionIntro from "../components/editorial/SectionIntro";
 
 const questions = [
