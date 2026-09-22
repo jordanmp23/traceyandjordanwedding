@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import PageHero from "../components/page_hero_components/page_hero";
 import registryImg from "../assets/engagement_hug.jpg";
+import smallRegistryImg from "../assets/bwEngagement.jpg"
 import SectionIntro from "../components/editorial/SectionIntro";
 import PhotoTextBlock from "../components/editorial/PhotoTextBlock";
 
@@ -40,7 +41,7 @@ function Registry() {
         <PhotoTextBlock
           eyebrow="02 · Our registry"
           title="A few things for the next chapter."
-          image={registryImg}
+          image={smallRegistryImg}
           imageAlt="Tracey and Jordan together"
           caption="Thank you for celebrating with us"
         >
