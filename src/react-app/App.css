@@ -560,6 +560,46 @@
   color: rgba(255, 255, 255, 0.82);
 }
 
+.full-bleed--proposal .full-bleed__content {
+  width: min(calc(100% - 3rem), 1500px);
+}
+
+.full-bleed--proposal .full-bleed__content > * {
+  margin-left: 52%;
+}
+
+.full-bleed--proposal .full-bleed__title {
+  max-width: 650px;
+  font-size: clamp(3rem, 6vw, 6.2rem);
+}
+
+.full-bleed--proposal .full-bleed__copy {
+  max-width: 480px;
+}
+
+@media (max-width: 900px) {
+  .full-bleed--proposal .full-bleed__content > * {
+    margin-left: 46%;
+  }
+
+  .full-bleed--proposal .full-bleed__title {
+    max-width: 500px;
+    font-size: clamp(2.8rem, 7vw, 5rem);
+  }
+}
+
+@media (max-width: 700px) {
+  .full-bleed--proposal .full-bleed__content > * {
+    margin-left: 0;
+  }
+
+  .full-bleed--proposal .full-bleed__title {
+    max-width: 100%;
+    font-size: clamp(3rem, 13vw, 5rem);
+  }
+}
+
+
 /* ------------------------------------------------------------------ */
 /* Timeline                                                            */
 /* ------------------------------------------------------------------ */

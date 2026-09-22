@@ -9,16 +9,24 @@ type FullBleedProps = {
   eyebrow: string;
   title: string;
   children?: ReactNode;
+  className?: string;
 };
 
-export default function FullBleed({ image, imageAlt, eyebrow, title, children }: FullBleedProps) {
+export default function FullBleed({
+  image,
+  imageAlt,
+  eyebrow,
+  title,
+  children,
+  className = "",
+}: FullBleedProps) {
   const ref = useRef<HTMLElement | null>(null);
   const reduceMotion = useReducedMotion();
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
   const y = useTransform(scrollYProgress, [0, 1], reduceMotion ? [0, 0] : [-30, 30]);
 
   return (
-    <section ref={ref} className="full-bleed">
+    <section ref={ref} className={`full-bleed ${className}`}>
       <motion.img
         className="full-bleed__image"
         src={image}
