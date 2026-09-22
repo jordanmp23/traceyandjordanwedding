@@ -1,5 +1,6 @@
 import PageHero from "../components/page_hero_components/page_hero";
 import rsvpImg from "../assets/cana_vineyards.jpg";
+import taraTreeImg from "../assets/taraTree.png"
 import SectionIntro from "../components/editorial/SectionIntro";
 
 function RSVP() {
@@ -21,7 +22,7 @@ function RSVP() {
 
         <div className="invitation-shell">
           <div className="invitation-shell__image">
-            <img src={rsvpImg} alt="Cana Vineyards" />
+            <img src={taraTreeImg} alt="Cana Vineyards" />
           </div>
           <div className="invitation-shell__content">
             <p className="invitation-shell__eyebrow">June 5, 2027 · Middleburg, Virginia</p>

@@ -13,8 +13,8 @@ function Event() {
 
       <section className="editorial-intro">
         <SectionIntro
-          eyebrow="June 5, 2027 · Middleburg, Virginia"
-          title="A day to slow down, celebrate, and stay awhile."
+          eyebrow="A day to slow down, celebrate, and stay awhile."
+          title="June 5, 2027 · Middleburg, Virginia"
           align="center"
           body={
             <p>
@@ -34,7 +34,7 @@ function Event() {
           caption="Middleburg, Virginia"
         >
           <p>
-            Our ceremony and reception will take place at Cana Vineyards, surrounded by the Virginia countryside.
+            <b>6 p.m. - 11 p.m.</b>
           </p>
           <p>
             The ceremony begins promptly at 6pm. Cocktail hour and the reception will follow immediately after.
